@@ -76,7 +76,7 @@ fn unzip_file() -> Result<()> {
 #[tokio::main]
 async fn find_template() -> Result<()> {
 println!("🚀 Fazendo download do template...");
- let target = "https://github.com/andrewronscki/code-styles-nestjs/archive/v1.1.1.zip";
+ let target = "https://github.com/andrewronscki/code-styles-nestjs/archive/v1.1.2.zip";
  let response = reqwest::get(target).await?;
 
  let path = Path::new("./download.zip");
@@ -96,7 +96,7 @@ println!("🚀 Fazendo download do template...");
 fn set_name(project_name: &String) -> Result<()> {
 	println!("🚀 Renomeando pasta do projeto para o nome requerido...");
 	
-	fs::rename("code-styles-nestjs-1.1.1", project_name)?;
+	fs::rename("code-styles-nestjs-1.1.2", project_name)?;
 
 	println!("✅ Pasta renomeada!");
 	Ok(())
