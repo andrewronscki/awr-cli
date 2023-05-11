@@ -26,6 +26,8 @@ Tabela de conteúdos
    * [Tecnologias](#-tecnologias)
      * [CLI](#cli-rust)
    * [Estrutura do Template do Projeto](#-estrutura-do-template-do-projeto)
+   * [Como usar](#-como-usar)
+     * [No Linux](#linux)
    * [Autor](#-autor)
    * [Licença](#-licença)
 <!--te-->
@@ -42,7 +44,7 @@ Tabela de conteúdos
 ## ⚙️ Funcionalidades
 
 - [x] NestJS:
-  - [x] Criar templete
+  - [x] Criar projeto com base no template
 ```bash
 awr nest new hello-world
 ```
@@ -71,7 +73,7 @@ $ cd awr-cli
 $ cargo run nest new hello-world
 
 # Será criado uma pasta com o nome hello-world e nele irá conter o template do projeto
-# Na pasta target/debug terá sido criado um arquivo executavel chamado AWR, rodando no windows ele criará um executável chamado AWR.exe
+# Na pasta target/debug terá sido criado um arquivo executavel chamado awr, rodando no windows ele criará um executável chamado awr.exe
 
 ```
 
@@ -81,14 +83,14 @@ $ cargo run nest new hello-world
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
-#### [](https://github.com/AWR-solucoes-de-pagamentos/AWR-cli)**CLI** ([Rust](https://www.rust-lang.org/pt-BR))
+#### [](https://github.com/andrewronscki/awr-cli)**CLI** ([Rust](https://www.rust-lang.org/pt-BR))
 -   **[clap](https://docs.rs/crate/clap/4.0.32)**
 -   **[error-chain](https://docs.rs/crate/error-chain/0.12.4)**
 -   **[reqwest](https://docs.rs/crate/reqwest/0.11.13)**
 -   **[tokio](https://docs.rs/crate/tokio/1.24.1)**
 -   **[zip](https://docs.rs/crate/zip/0.6.3)**
 
-> Veja o arquivo  [Cargo.toml](https://github.com/AWR-solucoes-de-pagamentos/AWR-cli/blob/main/Cargo.toml)
+> Veja o arquivo  [Cargo.toml](https://github.com/andrewronscki/awr-cli/blob/main/Cargo.toml)
 
 ---
 
@@ -101,6 +103,39 @@ A estrutura do template do projeto segue este modelo:
 <div align="center">
   <img alt="Arquitetura da Api" src="./arquitetura-software.png">
 </div>
+
+---
+
+## 👨‍💻 Como usar
+### Linux
+- Baixe o arquivo awr <a href="https://github.com/andrewronscki/awr-cli/blob/main/awr" target="_blank">clicando aqui!</a>
+- Após baixar, abra o terminal e siga os passos a seguir:
+```bash
+# Criar pasta .awr
+mkdir .awr
+
+# Mover arquivo baixado para pasta .awr
+mv ~/downloads/awr ~/.awr/
+
+# Dar permissão de execução e escrita para o arquivo
+cd .awr
+chmod 755 awr
+```
+- Adicionar no arquivo *.bashrc* ou *.zshrc* o caminho para o executável no PATH:
+```
+# Exemplo no .zshrc
+export PATH="$HOME/.awr:$PATH"
+```
+- Agora basta testar utilizando o seguinte comando em qualquer pasta do seu terminal:
+```
+awr nest new hello-world
+
+# Deverá criar uma pasta chamada hello-world com o template do projeto.
+```
+<img src="https://github.com/andrewronscki/awr-cli/blob/main/yoda.gif" width="300px;" alt="Mestre Yoda"/>
+<br />
+
+-***“Que a Força esteja com você”***
 
 ---
 
