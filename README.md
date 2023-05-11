@@ -37,7 +37,7 @@ Tabela de conteúdos
 
 🤖 AWR CLI - é uma forma de criar e evoluir projetos utilizando o padrão adotado pela AWR.
 
-É uma Interface de Linha de Comando que permite criar novos projetos em NestJS e futuramente em Go Lang utilizando Clean Archtecture e DDD.
+É uma Interface de Linha de Comando que permite criar novos projetos em NestJS utilizando Clean Archtecture e DDD.
 
 ---
 
